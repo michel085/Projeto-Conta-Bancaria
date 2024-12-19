@@ -5,19 +5,28 @@ public class DadosBancarios {
         Scanner dadosCliente = new Scanner(System.in);
         String nome = "";
         String tipoConta = "";
+        String banco = "";
         double Saldo;
         double novoSaldo = 0;
         int menuOpcoes = 0;
-        String banco = "";
+        int numeroAgencia = 0;
+        int numeroConta = 0;
 
         System.out.println("Qual o seu banco?");
-        banco = dadosCliente.nextLine();  // Usando nextLine para ler a linha inteira
+        banco = dadosCliente.nextLine();
+        System.out.println("Qual a agência?");
+        numeroAgencia = dadosCliente.nextInt();
+        System.out.println("Qual o digíto da conta?");
+        numeroConta = dadosCliente.nextInt();
         System.out.println("Qual o seu nome?");
-        nome = dadosCliente.nextLine();  // Usando nextLine para ler o nome completo
+        nome = dadosCliente.nextLine();
         System.out.println("Qual o tipo da conta?");
-        tipoConta = dadosCliente.nextLine();  // Usando nextLine para ler o tipo da conta
+        tipoConta = dadosCliente.nextLine();
         System.out.println("Qual o seu saldo?");
         Saldo = dadosCliente.nextDouble();
+
+        //Fazer verificação de dados no banco, se não for encontrado voltar para o sistema inicial de preenchimento de dados
+
         System.out.println("***********************************");
         System.out.println("Dados iniciais do cliente");
         System.out.println("Banco: " + banco);
@@ -44,10 +53,11 @@ public class DadosBancarios {
                 novoSaldo = dadosCliente.nextDouble();
                 Saldo += novoSaldo;
                 System.out.println(Saldo);
+                //realizar recebimento com pessoas cadastradas no banco de dados, pedir senha de acesso ao usuario para realizar transferencia
             } else if (menuOpcoes == 3) {
                 System.out.println("Informe o valor a ser transferido");
                 novoSaldo = dadosCliente.nextDouble();
-
+                //realizar transferencia com pessoas cadastradas no banco de dados
                 if (novoSaldo > Saldo) {
                     System.out.println("Você não pode realizar a transferência. Saldo insuficiente.");
                 } else {
@@ -65,5 +75,6 @@ public class DadosBancarios {
         System.out.println("Tipo da conta: " + tipoConta);
         System.out.println("Saldo final: " + Saldo);
         System.out.println("***********************************");
+        //mostrar as pessoas que realizaram a transferencia e colocar no console
     }
 }
