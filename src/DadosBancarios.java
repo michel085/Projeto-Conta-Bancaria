@@ -12,26 +12,33 @@ public class DadosBancarios {
         int numeroAgencia = 0;
         int numeroConta = 0;
 
-        System.out.println("Qual o seu banco?");
-        banco = dadosCliente.nextLine();
-        System.out.println("Qual a agência?");
-        numeroAgencia = dadosCliente.nextInt();
-        System.out.println("Qual o digíto da conta?");
-        numeroConta = dadosCliente.nextInt();
         System.out.println("Qual o seu nome?");
         nome = dadosCliente.nextLine();
-        System.out.println("Qual o tipo da conta?");
+
+        System.out.println("Qual é o seu banco?");
+        banco = dadosCliente.nextLine();
+
+        System.out.println("Qual é o tipo da conta?");
         tipoConta = dadosCliente.nextLine();
-        System.out.println("Qual o seu saldo?");
+
+        System.out.println("Qual é o número da agência?");
+        numeroAgencia = dadosCliente.nextInt();
+
+        System.out.println("Qual é o número da conta?");
+        numeroConta = dadosCliente.nextInt();
+
+        System.out.println("Qual é o seu saldo?");
         Saldo = dadosCliente.nextDouble();
 
         //Fazer verificação de dados no banco, se não for encontrado voltar para o sistema inicial de preenchimento de dados
 
         System.out.println("***********************************");
         System.out.println("Dados iniciais do cliente");
-        System.out.println("Banco: " + banco);
         System.out.println("Nome: " + nome);
+        System.out.println("Banco: " + banco);
         System.out.println("Tipo da conta: " + tipoConta);
+        System.out.println("Agencia: " + numeroAgencia);
+        System.out.println("Conta: " + numeroConta);
         System.out.println("Saldo inicial: " + Saldo);
         System.out.println("***********************************");
         System.out.println("""
