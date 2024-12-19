@@ -71,10 +71,12 @@ public class DadosBancarios {
                     Saldo -= novoSaldo;
                     System.out.println("Transferência realizada. Novo saldo: " + Saldo);
                 }
-            } else {
-                System.out.println("Você saiu do sistema");
+            } else if (menuOpcoes > 4){
+                System.out.println("Não existe essa opção, escolha um número de 1 a 4");
             }
         }
+        System.out.println("\nVocê saiu do sistema\n\n");
+
         System.out.println("***********************************");
         System.out.println("Dados finais do cliente");
         System.out.println("Banco: " + banco);
