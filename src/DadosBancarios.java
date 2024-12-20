@@ -75,7 +75,7 @@ public class DadosBancarios {
                 System.out.println("Não existe essa opção, escolha um número de 1 a 4");
             }
         }
-        System.out.println("\nVocê saiu do sistema\n\n");
+        System.out.println("\nVocê saiu do sistem\n);
 
         System.out.println("***********************************");
         System.out.println("Dados finais do cliente");
